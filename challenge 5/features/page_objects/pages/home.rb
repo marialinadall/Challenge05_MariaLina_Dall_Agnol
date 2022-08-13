@@ -1,12 +1,13 @@
-class Home < SitePrism::Page 
-    set_url '/'
+require_relative '../sections/header'
+require_relative '../sections/product'
+module Pages
+    class Home < SitePrism::Page 
+        set_url ('/')
+        section :header, Sections::Header, 'header'
 
-    element :btn_home_search, '[name="submit_search"]'
-    element :search_input, '[name="search_query"]'
-
-
-    def search_for (product)
-        btn_home_search.click
-        search_input.set product
+        def search_for (product)
+            header.search_input.set product
+            header.btn_home_search.click
+        end
     end
 end
