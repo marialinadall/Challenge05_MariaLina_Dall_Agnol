@@ -4,20 +4,38 @@
 @checkout
 Funcionalidade: Checkout 
 Como usuário do e-commerce Your Logo
-Quero poder utlizar as funcionalidades do carrinho com sucesso
-Para poder ter uma experiência agradável com a aplicação
+Quero poder prosseguir com o Checkout
+Para realizar a compra
 
     Contexto: 
-    Dado que esteja na página do carrinho 
+        Dado que o usuário adicionou um produto no carrinho
 
-    @change_quantity_cart
-    Cenário: Alterar quantidade do produto no carrinho
-        Quando mudar a quantidade de um produto 
-        Então deve alterar a quantidade com sucesso 
-        E pode assim proceder para o checkout ou continuar comprando
+    @payment_bank
+    Esquema do Cenário: validar pagamento via transferência 
+        Quando logar com "<e-mail" e "<senha>" válidos
+        E escolher um endereço para entrega 
+        E escolher o tipo de entrega 
+        E selecionar a forma de pagamento via transferência "<via_bank>"
+        Então o usuário clicará em I confirm my order e realizará a compra
     
-    @delete_product_cart
-    Cenário: Excluir produto do carrinho
-        Quando excluir um produto do carrinho
-        Então o produto deverá desaparecer da página do carrinho
-        E pode proceder ao checkout ou continuar comprando
+     Exemplos:
+
+    |           e-mail         |    senha    |               via_bank             |
+    |     teste123@gmail.com   |   123456    |          Pay by bank wire          |
+
+    
+    @payment_check
+    Esquema do Cenário: Validar pagamento via cheque
+        Quando logar com "<e-mail" e "<senha>" válidos
+        E escolher um endereço para entrega 
+        E escolher o tipo de entrega 
+        E selecionar a forma de pagamento via transferência "<via_check>"
+        Então o usuário clicará em I confirm my order e realizará a compra
+    
+     Exemplos:
+
+    |           e-mail         |    senha    |               via_check            |
+    |     teste123@gmail.com   |   123456    |             Pay by check           |
+
+
+    
