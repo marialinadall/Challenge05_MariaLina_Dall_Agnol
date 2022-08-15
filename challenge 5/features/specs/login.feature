@@ -13,24 +13,24 @@ Para realizar compras
 
     @invalid_login
     Esquema do Cenário: Login Inválido
-        Quando o usúario tentar login com "<e-mail>" ou "<senha>" inválidos
+        Quando o usúario tentar login com "<email>" ou "<senha>" inválidos
         Então deverá ser exibida a "<msg>"
 
     Exemplos:
 
-    |           e-mail         |    senha    |               msg             |
+    |           email         |    senha    |               msg             |
     |                          |   123456    |  An email address required.   |
-    |    teste123@teste.com    |             |  Password is required.        |
-    |    teste123@teste.com    |   ABCDEF    |  Authentication failed.       |
+    |    teste123@gmail.com    |             |  Password is required.        |
+    |    teste123@gmail.com    |   ABCDEF    |  Authentication failed.       |
 
     @valid_login
     Esquema do Cenário: Login Válido
-        Quando o usúario tentar login com "<e-mail>" ou "<senha>" válidos
+        Quando o usúario tentar login com "<email>" ou "<senha>" válidos
         Então deverá ser direcionado a página My Account com a "<msg>" de boas vindas
 
         Exemplos:
 
-    |           e-mail         |    senha    |                                          msg                                                 |
-    |    teste123@teste.com    |   123456    |  Welcome to your account. Here you can manage all of your personal information and orders.   |
+    |           email          |    senha    |                                          msg                                                 |
+    |    teste123@gmail.com    |   123456    |  Welcome to your account. Here you can manage all of your personal information and orders.   |
   
 

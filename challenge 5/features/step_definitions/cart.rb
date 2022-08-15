@@ -1,29 +1,17 @@
-Dado('que esteja na página do carrinho') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-Quando('mudar a quantidade de um produto') do
-    pending # Write code here that turns the phrase above into concrete actions
-end
-  
-Então('deve alterar a quantidade com sucesso') do
-    pending # Write code here that turns the phrase above into concrete actions
-end
-  
-Então('pode assim proceder para o checkout ou continuar comprando') do
-    pending # Write code here that turns the phrase above into concrete actions
+Dado('que escolha-se um produto para estar na página do carrinho') do
+    @product_page = Pages::PDP.new
+    @product_page.load
+    @product_page.btn_add_cart_pdp.click
 end
   
 Quando('excluir um produto do carrinho') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @product_page.btn_checkout_cart.click
+    @product_page.btn_delete_cart.click
 end
   
-  Então('o produto deverá desaparecer da página do carrinho') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+Então('o produto deverá desaparecer da página do carrinho') do
+    @product_page.wait_until_emptycart_msg_visible(wait: 5)
+end
   
-  Então('pode proceder ao checkout ou continuar comprando') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
 
 

@@ -23,11 +23,10 @@ Para conseguir realizar minhas compras
 
     Exemplos:
 
-    |         produtos         |   
-    |         dresses          |  
+    |         produtos         |    
     |         blouses          |          
     |         t-shirts         |  
 
-#vestidos
-#blusas
-#camisetas
+#primeira: vestidos
+#segunda: blusas
+#terceira: camisetas

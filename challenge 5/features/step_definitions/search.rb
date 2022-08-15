@@ -15,5 +15,4 @@ end
 Quando('o usúario buscar por {string} na barra de pesquisa') do |products|
     @home_page.search_for(products)
     @search_results_page = Pages::SearchResults.new
-  end
-  
+end

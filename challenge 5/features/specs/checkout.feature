@@ -12,7 +12,7 @@ Para realizar a compra
 
     @payment_bank
     Esquema do Cenário: validar pagamento via transferência 
-        Quando logar com "<e-mail" e "<senha>" válidos
+        Quando logar com "<email>" e "<senha>" válidos
         E escolher um endereço para entrega 
         E escolher o tipo de entrega 
         E selecionar a forma de pagamento via transferência "<via_bank>"
@@ -20,21 +20,21 @@ Para realizar a compra
     
      Exemplos:
 
-    |           e-mail         |    senha    |               via_bank             |
-    |     teste123@gmail.com   |   123456    |          Pay by bank wire          |
+    |           email          |    senha     |               via_bank              |
+    |     teste123@gmail.com   |   123456     |          Pay by bank wire           |
 
     
     @payment_check
     Esquema do Cenário: Validar pagamento via cheque
-        Quando logar com "<e-mail" e "<senha>" válidos
+        Quando logar com "<email>" e "<senha>" válidos
         E escolher um endereço para entrega 
         E escolher o tipo de entrega 
-        E selecionar a forma de pagamento via transferência "<via_check>"
+        E selecionar a forma de pagamento via cheque "<via_check>"
         Então o usuário clicará em I confirm my order e realizará a compra
     
      Exemplos:
 
-    |           e-mail         |    senha    |               via_check            |
+    |           email          |    senha    |               via_check            |
     |     teste123@gmail.com   |   123456    |             Pay by check           |
 
 

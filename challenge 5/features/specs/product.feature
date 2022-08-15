@@ -20,13 +20,13 @@ Para ficar satisfeita com o produto a ser comprado
         Quando trocar a cor do produto na PDP
         Então a imagem do produto deverá ser alterada 
 
-    @change_size
-    Cenário: Alterar tamanho do produto
-        Quando trocar o tamanho do produto na PDP
-        Então o tamanho deverá ser alterado e exibido
-
     @add_to_cart
-    Cenário: Adicionar ao carrinho através da PDP
+    Esquema do Cenário: Adicionar ao carrinho através da PDP
         Quando adicionar um produto ao carrinho 
-        Então deverá ser adicionado com sucesso
-        E aparecer a quantidade de produtos que estão no carrinho
+        Então deverá ser adicionado com sucesso "<msg>"
+
+    Exemplos:
+    |                    msg                         |
+    |Product successfully added to your shopping cart|
+
+        
