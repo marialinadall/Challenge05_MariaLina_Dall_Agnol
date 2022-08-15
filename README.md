@@ -79,7 +79,7 @@ Bibliotecas e Frameworks utilizados nesse repositório:
 
 * Validação do Produto
 
-* Validção do Checkout
+* Validação do Checkout
 
 * Validação do Carrinho
 
